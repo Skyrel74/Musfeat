@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <TextView
+        android:id="@+id/tv_settings_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="36dp"
+        android:text="Настройки поиска"
+
+
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <ImageButton
+        android:id="@+id/ib_settings_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+
+
+        android:background="@color/transparent"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_looking_for"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Какого музыканта вы ищете?"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+
+        app:layout_constraintTop_toBottomOf="@id/tv_settings_title"
+
+        />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/cg_chips_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/tv_looking_for">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_guitar_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Гитарист" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_bassguitar_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Басист" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_drummer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Барабанщик" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_keyboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Клавишник" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_brass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Духовые" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_violin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Скрипка" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_vocalist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Вокалист" />
+
+
+    </com.google.android.material.chip.ChipGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
