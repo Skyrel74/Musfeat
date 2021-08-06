@@ -1,4 +1,4 @@
-package com.example.musfeat
+package com.example.musfeat.presentation.cards
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,9 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.musfeat.databinding.FragmentCardTempBinding
 
-class TestFragment : Fragment(R.layout.fragment_card_temp) {
-
-    //TODO DELETE ME
+class CardFragment : Fragment() {
     private var _binding: FragmentCardTempBinding? = null
     private val binding get() = requireNotNull(_binding)
 
@@ -17,13 +15,11 @@ class TestFragment : Fragment(R.layout.fragment_card_temp) {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
         _binding = FragmentCardTempBinding.inflate(inflater, container, false)
-        val view = binding.root
 
-        return view
+        return binding.root
     }
-
 
     override fun onDestroyView() {
         _binding = null

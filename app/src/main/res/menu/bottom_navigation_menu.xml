@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/signInFragment"
-        android:icon="@drawable/ic_baseline_chat_24"
-        android:title="Chat" />
+        android:id="@+id/cardFragment"
+        android:icon="@drawable/ic_baseline_music_note_24"
+        android:title="Musicians" />
 
     <item
         android:id="@+id/signUpFragment"
         android:icon="@drawable/ic_baseline_chat_24"
-        android:title="Musicians" />
+        android:title="Messenger" />
 
     <item
         android:id="@+id/testFragment"
-        android:icon="@drawable/ic_baseline_person_outline_24"
+        android:icon="@drawable/ic_baseline_wheelchair_pickup_24"
         android:title="My profile" />
 
 </menu>

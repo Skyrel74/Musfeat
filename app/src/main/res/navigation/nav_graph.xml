@@ -8,11 +8,7 @@
     <fragment
         android:id="@+id/signInFragment"
         android:name="com.example.musfeat.presentation.signin.SignInFragment"
-        android:label="SignInFragment">
-        <action
-            android:id="@+id/action_signInFragment_to_testFragment"
-            app:destination="@id/testFragment" />
-    </fragment>
+        android:label="SignInFragment" />
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.example.musfeat.presentation.signup.SignUpFragment"
@@ -21,4 +17,8 @@
         android:id="@+id/testFragment"
         android:name="com.example.musfeat.TestFragment"
         android:label="TestFragment" />
+    <fragment
+        android:id="@+id/cardFragment"
+        android:name="com.example.musfeat.presentation.cards.CardFragment"
+        android:label="CardFragment" />
 </navigation>
