@@ -6,6 +6,7 @@ buildscript {
         firebaseAuthVersion = '7.2.0'
         cloudFirestoreVersion = '28.3.0'
         coroutinesVersion = '1.4.1'
+        navVersion = "2.3.5"
     }
 
     repositories {

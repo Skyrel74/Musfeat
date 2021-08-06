@@ -2,19 +2,27 @@ package com.example.musfeat
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.commit
-import com.example.musfeat.presentation.signup.SignUpFragment
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
+import com.example.musfeat.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
+private lateinit var binding: ActivityMainBinding
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+//        supportFragmentManager.commit {
+//            replace(R.id.main_container, SignUpFragment())
+//        }
 
-        supportFragmentManager.commit {
-            replace(R.id.main_container, SignUpFragment())
-        }
+        val navHost =
+            supportFragmentManager.findFragmentById(R.id.main_container) as NavHostFragment
+        val navController = navHost.navController
+        binding.bottomNavBar.setupWithNavController(navController)
+
     }
 
 }
