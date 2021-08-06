@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Musfeat</string>
+    <string name="login_button_text">Войти</string>
+    <string name="restore_password_text">Восстановить пароль</string>
+    <string name="no_account_text">У вас нет учетной записи?</string>
+    <string name="register_text">Зарегистрироваться</string>
+    <string name="enter_login_text">Введите логин</string>
+    <string name="enter_password_text">Введите пароль</string>
+    <string name="enter_name_text">Введите имя</string>
+    <string name="enter_surname_text">Введите фамилию</string>
+    <string name="enter_email_text">Введите email</string>
+    <string name="repeat_password_text">Повторите пароль</string>
+    <string name="submit_button_text">Подтвердить</string>
 </resources>

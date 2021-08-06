@@ -5,13 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.slidingpanelayout.widget.SlidingPaneLayout
-import com.example.musfeat.databinding.CardFragmentBinding
+import com.example.musfeat.databinding.SignInFragmentBinding
 
-class TestFragment : Fragment(R.layout.card_fragment) {
+class TestFragment : Fragment(R.layout.sign_in_fragment) {
 
     //TODO DELETE ME
-    private var _binding: CardFragmentBinding? = null
+    private var _binding: SignInFragmentBinding? = null
     private val binding get() = requireNotNull(_binding)
 
     override fun onCreateView(
@@ -19,24 +18,11 @@ class TestFragment : Fragment(R.layout.card_fragment) {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = CardFragmentBinding.inflate(inflater, container, false)
+        _binding = SignInFragmentBinding.inflate(inflater, container, false)
         val view = binding.root
-        binding.settingSlidingPane.lockMode = SlidingPaneLayout.LOCK_MODE_UNLOCKED
-        binding.settingSlidingPane.layoutMode = SlidingPaneLayout.LAYOUT_MODE_CLIP_BOUNDS
-        binding.settingSlidingPane.layoutDirection = SlidingPaneLayout.LAYOUT_DIRECTION_LTR
-
-        //todo swap to motion layout
-
-        binding.ibSettingsClose.setOnClickListener {
-            binding.settingSlidingPane.closePane()
-        }
         return view
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.settingSlidingPane.closePane()
-        super.onViewCreated(view, savedInstanceState)
-    }
 
     override fun onDestroyView() {
         _binding = null
