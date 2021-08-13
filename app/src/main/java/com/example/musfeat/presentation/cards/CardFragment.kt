@@ -5,18 +5,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.musfeat.databinding.FragmentCardTempBinding
+import androidx.fragment.app.viewModels
+import com.example.musfeat.databinding.FragmentCardBinding
 
 class CardFragment : Fragment() {
-    private var _binding: FragmentCardTempBinding? = null
+    private var _binding: FragmentCardBinding? = null
     private val binding get() = requireNotNull(_binding)
+    private val viewModel by viewModels<CardViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentCardTempBinding.inflate(inflater, container, false)
+        _binding = FragmentCardBinding.inflate(inflater, container, false)
 
         return binding.root
     }
