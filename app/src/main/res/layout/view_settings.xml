@@ -28,7 +28,7 @@
 
         android:layout_marginBottom="24dp"
         android:layout_marginTop="36dp"
-        android:text="Настройки поиска"
+        android:text="@string/search_settings_title"
         android:ellipsize="end"
         android:maxLines="2"
         android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Headline6"
@@ -60,7 +60,7 @@
         android:layout_height="wrap_content"
 
         android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Subtitle2"
-        android:text="Какого музыканта вы ищете?"
+        android:text="@string/search_settings_musician_type"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toBottomOf="@id/tv_settings_title"
         app:layout_constraintBottom_toTopOf="@id/flow_chips_filter" />
@@ -86,7 +86,7 @@
         android:id="@+id/chip_guitar_player"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Гитарист"
+        android:text="@string/guitar_player"
 
         tools:checked="true" />
 
@@ -95,20 +95,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="Басист" />
+        android:text="@string/bassguitar_player" />
 
     <com.google.android.material.chip.Chip
         android:id="@+id/chip_drummer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="Барабанщик" />
+        android:text="@string/drummer" />
 
     <com.google.android.material.chip.Chip
         android:id="@+id/chip_keyboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Клавишник"
+        android:text="@string/keyboard_player"
 
         tools:checked="true" />
 
@@ -117,21 +117,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="Духовые" />
+        android:text="@string/brass" />
 
     <com.google.android.material.chip.Chip
         android:id="@+id/chip_violin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="Скрипка" />
+        android:text="@string/violin" />
 
     <com.google.android.material.chip.Chip
         android:id="@+id/chip_vocalist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="Вокалист" />
+        android:text="@string/vocalist" />
 
     <TextView
         android:id="@+id/tv_search_radius"
@@ -140,7 +140,7 @@
 
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
-        android:text="Радиус поиска : %1$d"
+        android:text="@string/search_settings_radius"
         android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Subtitle2"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toBottomOf="@id/flow_chips_filter" />

@@ -11,4 +11,14 @@
     <string name="enter_email_text">Введите email</string>
     <string name="repeat_password_text">Повторите пароль</string>
     <string name="submit_button_text">Подтвердить</string>
+    <string name="search_settings_title">Настройки поиска</string>
+    <string name="search_settings_musician_type">Какого музыканта вы ищете?</string>
+    <string name="guitar_player">Гитарист</string>
+    <string name="bassguitar_player">Басист</string>
+    <string name="drummer">Барабанщик</string>
+    <string name="keyboard_player">Клавишник</string>
+    <string name="brass">Духовые</string>
+    <string name="violin">Скрипка</string>
+    <string name="vocalist">Вокалист</string>
+    <string name="search_settings_radius">Радиус поиска : %1$d</string>
 </resources>
