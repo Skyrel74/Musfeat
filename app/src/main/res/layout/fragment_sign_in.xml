@@ -34,9 +34,9 @@
         app:layout_constraintBottom_toTopOf="@id/til_password"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:startIconDrawable="@drawable/ic_baseline_alternate_email_24"
-
-        >
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:startIconDrawable="@drawable/ic_baseline_alternate_email_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -55,6 +55,7 @@
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toBottomOf="@id/til_login"
+        app:layout_constraintBottom_toTopOf="@id/bt_login"
         app:startIconDrawable="@drawable/ic_baseline_lock_24">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -73,6 +74,7 @@
         android:text="@string/login_button_text"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintBottom_toTopOf="@id/tv_restore_password"
         app:layout_constraintTop_toBottomOf="@id/til_password" />
 
     <TextView
@@ -81,6 +83,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/restore_password_text"
+        app:layout_constraintBottom_toTopOf="@id/tv_no_account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bt_login" />
