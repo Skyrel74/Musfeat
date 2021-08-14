@@ -9,8 +9,8 @@ import androidx.fragment.app.viewModels
 import com.example.musfeat.databinding.FragmentMessageListBinding
 
 class MessagesFragment : Fragment() {
-    private var _bindind: FragmentMessageListBinding? = null
-    private val binding get() = requireNotNull(_bindind)
+    private var _binding: FragmentMessageListBinding? = null
+    private val binding get() = requireNotNull(_binding)
     private val viewModel by viewModels<MessagesViewModel>()
 
     override fun onCreateView(
@@ -18,13 +18,13 @@ class MessagesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _bindind = FragmentMessageListBinding.inflate(inflater, container, false)
+        _binding = FragmentMessageListBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
 
     override fun onDestroyView() {
-        _bindind = null
+        _binding = null
         super.onDestroyView()
     }
 }
