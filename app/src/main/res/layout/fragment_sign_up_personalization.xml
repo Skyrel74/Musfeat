@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <TextView
+        android:id="@+id/tv_select_avatar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/text_choose_your_avatar"
+        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Headline6"
+        app:layout_constraintBottom_toTopOf="@id/ib_add_avatar"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ib_add_avatar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="36dp"
+        android:background="@color/transparent"
+        android:src="@drawable/ic_baseline_add_circle_outline_24"
+        app:layout_constraintBottom_toTopOf="@id/tv_your_instruments"
+
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/tv_select_avatar" />
+
+    <TextView
+        android:id="@+id/tv_your_instruments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+
+        android:text="@string/text_your_instruments_select"
+        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Headline6"
+        app:layout_constraintBottom_toTopOf="@id/flow_chips_filter"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/ib_add_avatar" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_chips_filter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:constraint_referenced_ids="chip_bassguitar_player,chip_brass,chip_drummer,chip_guitar_player,chip_keyboard,chip_violin,chip_vocalist"
+        app:flow_horizontalBias="0"
+        app:flow_horizontalGap="4dp"
+        app:flow_horizontalStyle="packed"
+        app:flow_verticalStyle="spread_inside"
+        app:flow_wrapMode="chain"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/tv_your_instruments">
+
+    </androidx.constraintlayout.helper.widget.Flow>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_guitar_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/guitar_player"
+
+        tools:checked="true" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_bassguitar_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/bassguitar_player" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_drummer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/drummer" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_keyboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/keyboard_player"
+
+        tools:checked="true" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_brass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/brass" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_violin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/violin" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_vocalist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/vocalist" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/submit_button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,4 +21,6 @@
     <string name="violin">Скрипка</string>
     <string name="vocalist">Вокалист</string>
     <string name="search_settings_radius">Радиус поиска : %1$d</string>
+    <string name="text_your_instruments_select">На каких инструментах вы играете?</string>
+    <string name="text_choose_your_avatar">Выбирете ваш аватар</string>
 </resources>
