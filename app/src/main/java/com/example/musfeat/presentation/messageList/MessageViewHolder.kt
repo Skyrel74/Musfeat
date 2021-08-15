@@ -1,3 +1,7 @@
 package com.example.musfeat.presentation.messageList
 
-//TODO WAITING FOR LOGIC
+import androidx.recyclerview.widget.RecyclerView
+import com.example.musfeat.databinding.ViewMessageItemBinding
+
+class MessageViewHolder(private val binding: ViewMessageItemBinding) :
+    RecyclerView.ViewHolder(binding.root)
