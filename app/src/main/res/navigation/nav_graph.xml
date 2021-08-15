@@ -35,7 +35,11 @@
     <fragment
         android:id="@+id/messagesFragment"
         android:name="com.example.musfeat.presentation.messageList.MessagesFragment"
-        android:label="MessagesFragment" />
+        android:label="MessagesFragment">
+        <action
+            android:id="@+id/action_messagesFragment_to_dialogFragment"
+            app:destination="@id/dialogFragment" />
+    </fragment>
     <fragment
         android:id="@+id/signUpPersonalizationFragment"
         android:name="com.example.musfeat.presentation.signUpPersonalization.SignUpPersonalizationFragment"
@@ -44,4 +48,8 @@
         android:id="@+id/userProfileFragment"
         android:name="com.example.musfeat.presentation.userProfile.UserProfileFragment"
         android:label="UserProfileFragment" />
+    <fragment
+        android:id="@+id/dialogFragment"
+        android:name="com.example.musfeat.presentation.dialog.DialogFragment"
+        android:label="DialogFragment" />
 </navigation>
