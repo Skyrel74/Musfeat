@@ -78,4 +78,9 @@
         <item name="android:fontFamily">@font/noto_sans_jp</item>
         <item name="android:textSize">10sp</item>
     </style>
+
+    <style name="circle">
+        <item name="cornerSize">50%</item>
+    </style>
+
 </resources>
