@@ -16,7 +16,6 @@
         android:icon="@drawable/ic_baseline_person_outline_24"
         android:title="My profile" />
 
-
     <item
         android:id="@+id/testFragment"
         android:icon="@drawable/ic_baseline_wheelchair_pickup_24"
