@@ -1,6 +1,7 @@
 package com.example.musfeat.presentation.signUpPersonalization
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,6 +24,14 @@ class SignUpPersonalizationFragment : Fragment() {
         _binding = FragmentSignUpPersonalizationBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val email = requireArguments().getString("email")
+        val password = requireArguments().getString("password")
+        Log.d(email.toString(), password.toString())
     }
 
     override fun onDestroyView() {

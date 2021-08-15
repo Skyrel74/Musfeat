@@ -1,4 +1,4 @@
-package com.example.musfeat.presentation.messageList
+package com.example.musfeat.presentation.chat
 //
 //import android.view.ViewGroup
 //import androidx.recyclerview.widget.DiffUtil

@@ -5,7 +5,10 @@ interface Auth {
     /**
      * Function to sign up user by his [email] and [password]
      */
-    suspend fun signUp(email: String, password: String)
+    suspend fun signUp(
+        email: String, password: String,
+        onComplete: Unit, onError: Unit
+    )
 
     /**
      * Function to sign in user by his [email] and [password]
