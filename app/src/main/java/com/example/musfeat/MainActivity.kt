@@ -21,9 +21,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//        supportFragmentManager.commit {
-//            replace(R.id.main_container, SignUpFragment())
-//        }
 
         val navHost =
             supportFragmentManager.findFragmentById(R.id.main_container) as NavHostFragment

@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.musfeat.databinding.FragmentProfileBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class UserProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = requireNotNull(_binding)

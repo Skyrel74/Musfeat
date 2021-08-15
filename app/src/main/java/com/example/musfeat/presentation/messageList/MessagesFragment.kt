@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.musfeat.databinding.FragmentMessageListBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MessagesFragment : Fragment() {
     private var _binding: FragmentMessageListBinding? = null
     private val binding get() = requireNotNull(_binding)

@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.musfeat.databinding.FragmentSignUpPersonalizationBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SignUpPersonalizationFragment : Fragment() {
     private var _binding: FragmentSignUpPersonalizationBinding? = null
     private val binding get() = requireNotNull(_binding)
