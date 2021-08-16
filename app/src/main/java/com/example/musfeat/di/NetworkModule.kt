@@ -4,8 +4,12 @@ import com.example.musfeat.domain.usecase.auth.Auth
 import com.example.musfeat.domain.usecase.auth.AuthFirebase
 import com.example.musfeat.domain.usecase.db.RemoteDB
 import com.example.musfeat.domain.usecase.db.RemoteDBFirestore
+import com.example.musfeat.domain.usecase.storage.RemoteStorage
+import com.example.musfeat.domain.usecase.storage.RemoteStorageImpl
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -32,4 +36,22 @@ class NetworkModule {
     @Singleton
     fun provideRemoteDB(firestore: FirebaseFirestore, auth: FirebaseAuth): RemoteDB =
         RemoteDBFirestore(firestore, auth)
+
+    @Provides
+    @Singleton
+    fun provideStorageInstance(): FirebaseStorage = FirebaseStorage.getInstance()
+
+    @Provides
+    @Singleton
+    fun provideCurrentUserRef(storage: FirebaseStorage, auth: FirebaseAuth): StorageReference =
+        storage.reference
+            .child("users/${auth.currentUser!!.uid}")
+
+    @Provides
+    @Singleton
+    fun provideStorage(
+        storage: FirebaseStorage,
+        storageReference: StorageReference
+    ): RemoteStorage =
+        RemoteStorageImpl(storage, storageReference)
 }

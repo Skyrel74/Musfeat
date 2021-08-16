@@ -65,8 +65,11 @@ dependencies {
 
     // Cloud Firestore
     implementation "com.google.firebase:firebase-bom:$cloudFirestoreVersion"
-    //FIXME
     implementation 'com.google.firebase:firebase-firestore-ktx'
+
+    // Storage
+    implementation "com.google.firebase:firebase-bom:$storageVersion"
+    implementation 'com.google.firebase:firebase-storage-ktx'
 
     // Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"

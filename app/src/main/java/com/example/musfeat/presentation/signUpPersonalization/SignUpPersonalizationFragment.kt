@@ -1,14 +1,15 @@
 package com.example.musfeat.presentation.signUpPersonalization
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import com.example.musfeat.databinding.FragmentSignUpPersonalizationBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.async
 
 @AndroidEntryPoint
 class SignUpPersonalizationFragment : Fragment() {
@@ -20,10 +21,9 @@ class SignUpPersonalizationFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentSignUpPersonalizationBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -31,7 +31,25 @@ class SignUpPersonalizationFragment : Fragment() {
 
         val email = requireArguments().getString("email")
         val password = requireArguments().getString("password")
-        Log.d(email.toString(), password.toString())
+
+        setListeners()
+    }
+
+    private fun setListeners() {
+
+        binding.ibAddAvatar.setOnClickListener {
+
+        }
+
+
+
+        binding.btnSignUp.setOnClickListener {
+            //TODO(Progress bar start loading)
+            val signUpJob = lifecycleScope.async {
+                //viewModel.signUp()
+                //TODO(Progress bar stop loading)
+            }
+        }
     }
 
     override fun onDestroyView() {

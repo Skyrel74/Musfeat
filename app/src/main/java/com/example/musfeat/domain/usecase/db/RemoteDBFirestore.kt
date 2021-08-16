@@ -7,12 +7,12 @@ import com.google.firebase.firestore.FirebaseFirestore
 import javax.inject.Inject
 
 class RemoteDBFirestore @Inject constructor(
-    private val firestoreInstance: FirebaseFirestore,
+    private val firestore: FirebaseFirestore,
     private val auth: FirebaseAuth
 ) : RemoteDB {
 
     private val currentUserDocRef: DocumentReference
-        get() = firestoreInstance.document(
+        get() = firestore.document(
             "users/${
                 auth.uid ?: throw NullPointerException(
                     "UID is null."
@@ -20,7 +20,7 @@ class RemoteDBFirestore @Inject constructor(
             }"
         )
 
-    override suspend fun createUser(user: User) {
+    override suspend fun createUser(user: User, onCompete: () -> Unit) {
 
     }
 }
