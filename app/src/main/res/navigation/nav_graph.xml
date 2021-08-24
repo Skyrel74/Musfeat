@@ -15,6 +15,9 @@
         <action
             android:id="@+id/action_signInFragment_to_cardFragment"
             app:destination="@id/cardFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_restorePasswordFragment"
+            app:destination="@id/restorePasswordFragment" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -52,4 +55,12 @@
         android:id="@+id/dialogFragment"
         android:name="com.example.musfeat.presentation.dialog.DialogFragment"
         android:label="DialogFragment" />
+    <fragment
+        android:id="@+id/restorePasswordFragment"
+        android:name="com.example.musfeat.presentation.restorePassword.RestorePasswordFragment"
+        android:label="RestorePasswordFragment" >
+        <action
+            android:id="@+id/action_restorePasswordFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
 </navigation>
