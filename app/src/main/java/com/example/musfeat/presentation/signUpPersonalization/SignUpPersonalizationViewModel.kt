@@ -17,14 +17,21 @@ class SignUpPersonalizationViewModel @Inject constructor(
     private val remoteStorage: RemoteStorage,
 ) : ViewModel() {
 
-    suspend fun signUp(email: String, password: String, user: User, onError: () -> Unit) {
+    suspend fun signUp(
+        email: String,
+        password: String,
+        onError: () -> Unit,
+        user: User,
+        imageBytes: ByteArray?
+    ) {
         viewModelScope.launch {
             auth.signUp(email, password, user, {
-//                remoteDB.createUser(user) {
-//                    remoteStorage.uploadProfilePhoto()
-//                }
+                remoteDB.createUser(user) {
+                    if (imageBytes != null)
+                        remoteStorage.uploadProfilePhoto(imageBytes)
+                }
             }, {
-
+                onError()
             })
         }
     }

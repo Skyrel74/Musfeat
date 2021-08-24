@@ -5,6 +5,5 @@ data class User(
     val surname: String,
     val MusicalInstruments: List<MusicalInstrument>,
     val description: String?,
-    val userPicturePath: String?,
     val registrationTokens: String?
 )

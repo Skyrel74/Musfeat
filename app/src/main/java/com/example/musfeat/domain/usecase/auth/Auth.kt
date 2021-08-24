@@ -6,12 +6,12 @@ interface Auth {
 
     /**
      * Function to sign up user by his [email] and [password]
-     * [onComplete] function need to be called after successful execution
+     * [onSuccess] function need to be called after successful execution
      * [onError]    function need to be called after unsuccessful execution
      */
     suspend fun signUp(
         email: String, password: String, user: User,
-        onComplete: (user: User) -> Unit, onError: () -> Unit
+        onSuccess: suspend (user: User) -> Unit, onError: () -> Unit
     )
 
     /**

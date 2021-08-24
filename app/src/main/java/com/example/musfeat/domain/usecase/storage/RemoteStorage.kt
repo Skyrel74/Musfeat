@@ -6,9 +6,8 @@ interface RemoteStorage {
 
     /**
      * Function to upload [imageBytes] to storage
-     * [onSuccess] function need to be called after successful execution
      */
-    suspend fun uploadProfilePhoto(imageBytes: ByteArray, onSuccess: (imagePath: String) -> Unit)
+    suspend fun uploadProfilePhoto(imageBytes: ByteArray)
 
     /**
      * Function to upload [imageBytes] to storage

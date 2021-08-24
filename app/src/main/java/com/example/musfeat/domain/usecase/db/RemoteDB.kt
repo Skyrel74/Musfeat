@@ -6,7 +6,7 @@ interface RemoteDB {
 
     /**
      * Function to create [user] in remote db
-     * [onComplete] function need to be called after successful execution
+     * [onSuccess] function need to be called after successful execution
      */
-    suspend fun createUser(user: User, onCompete: () -> Unit)
+    suspend fun createUser(user: User, onSuccess: suspend () -> Unit)
 }
