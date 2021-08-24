@@ -10,13 +10,10 @@ class RemoteStorageImpl @Inject constructor(
 ) : RemoteStorage {
 
     override suspend fun uploadProfilePhoto(
-        imageBytes: ByteArray,
-        onSuccess: (imagePath: String) -> Unit
+        imageBytes: ByteArray
     ) {
         val profPictRef = currentUserRef.child("profilePicture")
-        profPictRef.putBytes(imageBytes).addOnSuccessListener {
-            onSuccess(profPictRef.path)
-        }
+        profPictRef.putBytes(imageBytes)
     }
 
     override suspend fun uploadMessageImage(

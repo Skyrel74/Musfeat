@@ -4,6 +4,8 @@ import com.example.musfeat.domain.entities.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class RemoteDBFirestore @Inject constructor(
@@ -20,7 +22,16 @@ class RemoteDBFirestore @Inject constructor(
             }"
         )
 
-    override suspend fun createUser(user: User, onCompete: () -> Unit) {
-
-    }
+    override suspend fun createUser(user: User, onSuccess: suspend () -> Unit): Unit =
+        coroutineScope {
+            currentUserDocRef.get().addOnSuccessListener { ds ->
+                if (!ds.exists()) {
+                    currentUserDocRef.set(user).addOnSuccessListener {
+                        launch {
+                            onSuccess()
+                        }
+                    }
+                }
+            }
+        }
 }

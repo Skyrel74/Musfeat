@@ -10,13 +10,15 @@ class AuthFirebase @Inject constructor(private val auth: FirebaseAuth) : Auth {
 
     override suspend fun signUp(
         email: String, password: String, user: User,
-        onComplete: (user: User) -> Unit, onError: () -> Unit
+        onSuccess: suspend (user: User) -> Unit, onError: () -> Unit
     ): Unit = coroutineScope {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     auth.currentUser!!.sendEmailVerification()
-                    onComplete(user)
+                    launch {
+                        onSuccess(user)
+                    }
                 } else
                     onError()
             }
