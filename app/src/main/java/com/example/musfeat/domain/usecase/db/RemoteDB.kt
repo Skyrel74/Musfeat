@@ -4,5 +4,9 @@ import com.example.musfeat.domain.entities.User
 
 interface RemoteDB {
 
-    suspend fun createUser(user: User)
+    /**
+     * Function to create [user] in remote db
+     * [onComplete] function need to be called after successful execution
+     */
+    suspend fun createUser(user: User, onCompete: () -> Unit)
 }

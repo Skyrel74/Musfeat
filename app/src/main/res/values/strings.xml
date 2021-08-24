@@ -23,4 +23,11 @@
     <string name="search_settings_radius">Радиус поиска : %1$d</string>
     <string name="text_your_instruments_select">На каких инструментах вы играете?</string>
     <string name="text_choose_your_avatar">Выбирете ваш аватар</string>
+
+    <!-- Sign Up -->
+    <string name="name_error">Имя должно быть больше, чем один символ</string>
+    <string name="surname_error">Фамилия должна быть больше, чем один символ</string>
+    <string name="email_error">Email не корректен</string>
+    <string name="password_error">Пароль должен быть больше пяти символов</string>
+    <string name="passwordRepeat_error">Пароли не совпадают</string>
 </resources>
