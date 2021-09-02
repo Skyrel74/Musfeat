@@ -9,11 +9,12 @@ import com.example.musfeat.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 private lateinit var binding: ActivityMainBinding
+
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    fun setNavBarVisibility(visibility: Boolean) {
-        binding.bottomNavBar.isVisible = visibility
+    private fun setIsNavBarVisible(isVisible: Boolean) {
+        binding.bottomNavBar.isVisible = isVisible
     }
 
 
@@ -25,6 +26,15 @@ class MainActivity : AppCompatActivity() {
         val navHost =
             supportFragmentManager.findFragmentById(R.id.main_container) as NavHostFragment
         val navController = navHost.navController
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when (destination.id) {
+                R.id.signInFragment -> setIsNavBarVisible(false)
+                R.id.signUpPersonalizationFragment -> setIsNavBarVisible(false)
+                R.id.signUpFragment -> setIsNavBarVisible(false)
+                R.id.restorePasswordFragment -> setIsNavBarVisible(false)
+                else -> setIsNavBarVisible(true)
+            }
+        }
         binding.bottomNavBar.setupWithNavController(navController)
     }
 }
