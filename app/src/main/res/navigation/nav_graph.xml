@@ -8,7 +8,7 @@
     <!--TODO rework after finish layout-->
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.example.musfeat.presentation.signin.SignInFragment"
+        android:name="com.example.musfeat.presentation.signIn.SignInFragment"
         android:label="SignInFragment"
         tools:layout="@layout/fragment_sign_in">
         <action
@@ -23,7 +23,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.example.musfeat.presentation.signup.SignUpFragment"
+        android:name="com.example.musfeat.presentation.signUp.SignUpFragment"
         android:label="SignUpFragment"
         tools:layout="@layout/fragment_sign_up">
         <action

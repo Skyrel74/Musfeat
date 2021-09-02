@@ -1,4 +1,4 @@
-package com.example.musfeat.presentation.signup
+package com.example.musfeat.presentation.signUp
 
 import android.os.Bundle
 import android.view.LayoutInflater

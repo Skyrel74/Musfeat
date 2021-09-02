@@ -1,4 +1,4 @@
-package com.example.musfeat.presentation.signup
+package com.example.musfeat.presentation.signUp
 
 import android.util.Patterns
 import androidx.lifecycle.ViewModel

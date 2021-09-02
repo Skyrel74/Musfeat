@@ -37,6 +37,7 @@
     <string name="brass_player">Духовые</string>
     <string name="violin_player">Скрипка</string>
     <string name="vocalist_player">Вокалист</string>
+    <string name="where_are_you_from_text">Из какого вы города?</string>
 
 
 </resources>

@@ -145,7 +145,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="start|top"
-        android:text="Из какого вы города?"
+        android:text="@string/where_are_you_from_text"
         android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Headline5"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
