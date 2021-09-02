@@ -2,6 +2,8 @@ package com.example.musfeat.utils
 
 import android.util.Patterns
 
+
+//This function will be reused , so i moved them to separate class
 object FieldsValidator {
     fun isNameValid(name: String): Boolean = name.trim().isNotBlank()
 
