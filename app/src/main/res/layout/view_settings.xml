@@ -28,7 +28,7 @@
 
         android:layout_marginBottom="24dp"
         android:layout_marginTop="36dp"
-        android:text="@string/search_settings_title"
+        android:text="@string/search_settings_title_text"
         android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Headline6"
 
         app:layout_constraintStart_toStartOf="@id/guideline_start"
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
 
         android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Subtitle2"
-        android:text="@string/search_settings_musician_type"
+        android:text="@string/search_settings_musician_type_text"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toBottomOf="@id/tv_settings_title"
         android:gravity="start|top"
@@ -106,7 +106,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="@string/drummer" />
+        android:text="@string/drummer_player" />
 
     <com.google.android.material.chip.Chip
         android:id="@+id/chip_keyboard"
@@ -121,21 +121,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="@string/brass" />
+        android:text="@string/brass_player" />
 
     <com.google.android.material.chip.Chip
         android:id="@+id/chip_violin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="@string/violin" />
+        android:text="@string/violin_player" />
 
     <com.google.android.material.chip.Chip
         android:id="@+id/chip_vocalist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="@string/vocalist" />
+        android:text="@string/vocalist_player" />
 
     <TextView
         android:id="@+id/tv_search_radius"

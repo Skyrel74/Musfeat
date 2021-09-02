@@ -1,33 +1,42 @@
 <resources>
     <string name="app_name">Musfeat</string>
+
+    <!--sign in-->
     <string name="login_button_text">Войти</string>
     <string name="restore_password_text">Восстановить пароль</string>
     <string name="no_account_text">У вас нет учетной записи?</string>
     <string name="register_text">Зарегистрироваться</string>
     <string name="enter_login_text">Введите логин</string>
     <string name="enter_password_text">Введите пароль</string>
+    <string name="submit_button_text">Подтвердить</string>
+
+    <!-- cards search settings-->
+    <string name="search_settings_title_text">Настройки поиска</string>
+    <string name="search_settings_musician_type_text">Какого музыканта вы ищете?</string>
+    <string name="search_settings_radius">Радиус поиска : %1$d</string>
+    <string name="instrument_selection_text">На каких инструментах вы играете?</string>
+    <string name="avatar_selection_text">Выбирете ваш аватар</string>
+
+    <!-- Sign Up -->
     <string name="enter_name_text">Введите имя</string>
     <string name="enter_surname_text">Введите фамилию</string>
     <string name="enter_email_text">Введите email</string>
     <string name="repeat_password_text">Повторите пароль</string>
-    <string name="submit_button_text">Подтвердить</string>
-    <string name="search_settings_title">Настройки поиска</string>
-    <string name="search_settings_musician_type">Какого музыканта вы ищете?</string>
+
+    <string name="name_error_text">Имя должно быть больше, чем один символ</string>
+    <string name="surname_error_text">Фамилия должна быть больше, чем один символ</string>
+    <string name="email_error_text">Email не корректен</string>
+    <string name="password_error_text">Пароль должен быть больше пяти символов</string>
+    <string name="password_repeat_error_text">Пароли не совпадают</string>
+
+    <!-- musicians-->
     <string name="guitar_player">Гитарист</string>
     <string name="bassguitar_player">Басист</string>
-    <string name="drummer">Барабанщик</string>
+    <string name="drummer_player">Барабанщик</string>
     <string name="keyboard_player">Клавишник</string>
-    <string name="brass">Духовые</string>
-    <string name="violin">Скрипка</string>
-    <string name="vocalist">Вокалист</string>
-    <string name="search_settings_radius">Радиус поиска : %1$d</string>
-    <string name="text_your_instruments_select">На каких инструментах вы играете?</string>
-    <string name="text_choose_your_avatar">Выбирете ваш аватар</string>
+    <string name="brass_player">Духовые</string>
+    <string name="violin_player">Скрипка</string>
+    <string name="vocalist_player">Вокалист</string>
 
-    <!-- Sign Up -->
-    <string name="name_error">Имя должно быть больше, чем один символ</string>
-    <string name="surname_error">Фамилия должна быть больше, чем один символ</string>
-    <string name="email_error">Email не корректен</string>
-    <string name="password_error">Пароль должен быть больше пяти символов</string>
-    <string name="passwordRepeat_error">Пароли не совпадают</string>
+
 </resources>

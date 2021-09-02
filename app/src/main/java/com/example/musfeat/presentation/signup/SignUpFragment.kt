@@ -52,22 +52,22 @@ class SignUpFragment : Fragment() {
     private fun setTextChangeListeners() {
         binding.tilName.editText!!.doAfterTextChanged { name ->
             if (!viewModel.isNameValid(name.toString()))
-                binding.tilName.editText!!.error = getString(R.string.name_error)
+                binding.tilName.editText!!.error = getString(R.string.name_error_text)
         }
 
         binding.tilSurname.editText!!.doAfterTextChanged { surname ->
             if (!viewModel.isSurnameValid(surname.toString()))
-                binding.tilSurname.editText!!.error = getString(R.string.surname_error)
+                binding.tilSurname.editText!!.error = getString(R.string.surname_error_text)
         }
 
         binding.tilEmail.editText!!.doAfterTextChanged { email ->
             if (!viewModel.isEmailValid(email.toString()))
-                binding.tilEmail.editText!!.error = getString(R.string.email_error)
+                binding.tilEmail.editText!!.error = getString(R.string.email_error_text)
         }
 
         binding.tilPassword.editText!!.doAfterTextChanged { password ->
             if (!viewModel.isPasswordValid(password.toString()))
-                binding.tilPassword.editText!!.error = getString(R.string.password_error)
+                binding.tilPassword.editText!!.error = getString(R.string.password_error_text)
         }
 
         binding.tilPasswordRepeat.editText!!.doAfterTextChanged { passwordRepeat ->
@@ -77,7 +77,7 @@ class SignUpFragment : Fragment() {
                 )
             )
                 binding.tilPasswordRepeat.editText!!.error =
-                    getString(R.string.passwordRepeat_error)
+                    getString(R.string.password_repeat_error_text)
         }
     }
 
