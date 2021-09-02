@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/signInFragment">
 
@@ -8,7 +9,8 @@
     <fragment
         android:id="@+id/signInFragment"
         android:name="com.example.musfeat.presentation.signin.SignInFragment"
-        android:label="SignInFragment">
+        android:label="SignInFragment"
+        tools:layout="@layout/fragment_sign_in">
         <action
             android:id="@+id/action_signInFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
@@ -22,7 +24,8 @@
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.example.musfeat.presentation.signup.SignUpFragment"
-        android:label="SignUpFragment">
+        android:label="SignUpFragment"
+        tools:layout="@layout/fragment_sign_up">
         <action
             android:id="@+id/action_signUpFragment_to_signUpPersonalizationFragment"
             app:destination="@id/signUpPersonalizationFragment" />
@@ -34,11 +37,13 @@
     <fragment
         android:id="@+id/cardFragment"
         android:name="com.example.musfeat.presentation.cards.CardFragment"
-        android:label="CardFragment" />
+        android:label="CardFragment"
+        tools:layout="@layout/fragment_card" />
     <fragment
-        android:id="@+id/messagesFragment"
+        android:id="@+id/chatsListFragment"
         android:name="com.example.musfeat.presentation.chatsList.ChatsListFragment"
-        android:label="MessagesFragment">
+        android:label="MessagesFragment"
+        tools:layout="@layout/fragment_chats_list">
         <action
             android:id="@+id/action_messagesFragment_to_dialogFragment"
             app:destination="@id/dialogFragment" />
@@ -46,19 +51,23 @@
     <fragment
         android:id="@+id/signUpPersonalizationFragment"
         android:name="com.example.musfeat.presentation.signUpPersonalization.SignUpPersonalizationFragment"
-        android:label="SignUpPersonalizationFragment" />
+        android:label="SignUpPersonalizationFragment"
+        tools:layout="@layout/fragment_sign_up_personalization" />
     <fragment
         android:id="@+id/userProfileFragment"
         android:name="com.example.musfeat.presentation.userProfile.UserProfileFragment"
-        android:label="UserProfileFragment" />
+        android:label="UserProfileFragment"
+        tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/dialogFragment"
         android:name="com.example.musfeat.presentation.dialog.DialogFragment"
-        android:label="DialogFragment" />
+        android:label="DialogFragment"
+        tools:layout="@layout/fragment_dialog" />
     <fragment
         android:id="@+id/restorePasswordFragment"
         android:name="com.example.musfeat.presentation.restorePassword.RestorePasswordFragment"
-        android:label="RestorePasswordFragment" >
+        android:label="RestorePasswordFragment"
+        tools:layout="@layout/fragment_restore_password">
         <action
             android:id="@+id/action_restorePasswordFragment_to_signInFragment"
             app:destination="@id/signInFragment" />

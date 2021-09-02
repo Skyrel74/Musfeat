@@ -7,7 +7,7 @@
         android:title="Musicians" />
 
     <item
-        android:id="@+id/messagesFragment"
+        android:id="@+id/chatsListFragment"
         android:icon="@drawable/ic_baseline_chat_24"
         android:title="Messenger" />
 
