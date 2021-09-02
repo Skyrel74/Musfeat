@@ -1,4 +1,4 @@
-package com.example.musfeat.presentation.chat
+package com.example.musfeat.presentation.chatsList
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,10 +10,10 @@ import com.example.musfeat.databinding.FragmentChatsListBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class ChatsFragment : Fragment() {
+class ChatsListFragment : Fragment() {
     private var _binding: FragmentChatsListBinding? = null
     private val binding get() = requireNotNull(_binding)
-    private val viewModel by viewModels<ChatsViewModel>()
+    private val viewModel by viewModels<ChatsListViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,

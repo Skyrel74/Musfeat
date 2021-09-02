@@ -1,4 +1,4 @@
-package com.example.musfeat.presentation.chat
+package com.example.musfeat.presentation.chatsList
 
 //import androidx.recyclerview.widget.RecyclerView
 //import com.example.musfeat.databinding.ViewMessageItemBinding

@@ -37,7 +37,7 @@
         android:label="CardFragment" />
     <fragment
         android:id="@+id/messagesFragment"
-        android:name="com.example.musfeat.presentation.chat.ChatsFragment"
+        android:name="com.example.musfeat.presentation.chatsList.ChatsListFragment"
         android:label="MessagesFragment">
         <action
             android:id="@+id/action_messagesFragment_to_dialogFragment"
