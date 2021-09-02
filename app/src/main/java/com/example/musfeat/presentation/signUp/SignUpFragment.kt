@@ -44,7 +44,11 @@ class SignUpFragment : Fragment() {
                 val email: String = binding.tilEmail.editText!!.text.toString()
                 val password: String = binding.tilPassword.editText!!.text.toString()
                 val bundle: Bundle = bundleOf("email" to email, "password" to password)
-                this.findNavController().navigate(R.id.signUpPersonalizationFragment, bundle)
+                findNavController().navigate(
+                    R.id.action_signUpFragment_to_signUpPersonalizationFragment,
+                    bundle
+                )
+
             }
         }
     }

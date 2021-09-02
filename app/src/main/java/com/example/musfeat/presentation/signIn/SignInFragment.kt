@@ -31,7 +31,7 @@ class SignInFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.tvRegisterLink.setOnClickListener {
-            this.findNavController().navigate(R.id.signUpFragment)
+            findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
         }
     }
 
