@@ -1,32 +1,14 @@
 package com.example.musfeat.presentation.cards
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.musfeat.R
 import com.example.musfeat.databinding.FragmentCardBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class CardFragment : Fragment() {
-    private var _binding: FragmentCardBinding? = null
-    private val binding get() = requireNotNull(_binding)
+class CardFragment : Fragment(R.layout.fragment_card) {
+    private val binding by viewBinding(FragmentCardBinding::bind)
     private val viewModel by viewModels<CardViewModel>()
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentCardBinding.inflate(inflater, container, false)
-
-        return binding.root
-    }
-
-    override fun onDestroyView() {
-        _binding = null
-        super.onDestroyView()
-    }
 }

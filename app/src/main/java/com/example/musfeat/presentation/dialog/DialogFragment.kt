@@ -1,30 +1,12 @@
 package com.example.musfeat.presentation.dialog
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.musfeat.R
 import com.example.musfeat.databinding.FragmentDialogBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class DialogFragment : Fragment() {
-    private var _binding: FragmentDialogBinding? = null
-    private val binding get() = requireNotNull(_binding)
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentDialogBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
-    }
-
-    override fun onDestroyView() {
-        _binding = null
-        super.onDestroyView()
-    }
+class DialogFragment : Fragment(R.layout.fragment_dialog) {
+    private val binding by viewBinding(FragmentDialogBinding::bind)
 }

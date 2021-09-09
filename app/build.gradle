@@ -39,12 +39,10 @@ android {
 }
 
 dependencies {
-
     implementation 'androidx.core:core-ktx:1.6.0'
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
-    implementation "androidx.slidingpanelayout:slidingpanelayout:1.2.0-alpha03"
 
     implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
 
@@ -53,8 +51,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     // Dagger Hilt
-    implementation "com.google.dagger:hilt-android:$hiltVersion"
     kapt "com.google.dagger:hilt-compiler:$hiltVersion"
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
 
     // Firebase Auth
     implementation "com.firebaseui:firebase-ui-auth:$firebaseAuthVersion"
@@ -64,17 +62,20 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore-ktx'
 
     // Storage
-    implementation "com.google.firebase:firebase-bom:$storageVersion"
     implementation 'com.google.firebase:firebase-storage-ktx'
+    implementation "com.google.firebase:firebase-bom:$storageVersion"
 
     // Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
 
-    //Navigation
-    implementation "androidx.navigation:navigation-fragment-ktx:$navVersion"
+    // Navigation
     implementation "androidx.navigation:navigation-ui-ktx:$navVersion"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navVersion"
 
-    //Fragment KTX
-    implementation "androidx.fragment:fragment-ktx:$fragmentKtx"
+    // Fragment KTX
+    implementation "androidx.fragment:fragment-ktx:$fragmentKtxVersion"
+
+    // ViewBindingPropertyDelegate
+    implementation "com.github.kirich1409:viewbindingpropertydelegate-noreflection:$viewBindingPropertyDelegateVersion"
 }
